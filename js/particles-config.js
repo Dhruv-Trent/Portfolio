@@ -1,5 +1,5 @@
 tsParticles.load("tsparticles", {
-    fullScreen: { enable: false },
+    fullScreen: { enable: true },
     background: {
       color: {
         value: "#000000"
@@ -23,7 +23,7 @@ tsParticles.load("tsparticles", {
         value: 0.8
       },
       size: {
-        value: { min: 1, max: 5 }
+        value: { min: 1, max: 3 }
       },
       move: {
         enable: true,

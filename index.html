@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <div id="tsparticles"></div>
     <nav>
         <img src="Images/logo.png" alt="Dhruv Patel Logo" class="logoImg" />
         <div class="rightSideNav">
@@ -19,25 +20,29 @@
                 <li><a href="#MainSectionId" class="active" data-nav="Home">Home</a></li>
                 <li><a href="#AboutId" data-nav="About">About</a></li>
                 <li><a href="#ExperienceId" data-nav="Experience">Experience</a></li>
+
                 <li><a href="#ProjectsId" data-nav="Projects">Projects</a></li>
                 <li><a href="#ContactId" data-nav="Contact">Contact</a></li>
             </ul>
+    
         </div>
     </nav>
 
-    <section class="MainSection" id="MainSectionId">
-        <div id="tsparticles"></div> 
+    <section class="MainSection animate fadeIn" id="MainSectionId">
+
         <div class="ContentData">
             <h1>Hello, I am <strong>Dhruv Patel</strong></h1>
             <span>A Software Engineer who loves turning ideas into reality through code and creativity.</span>
         </div>
     </section>
 
-    <section class="AboutSection" id="AboutId">
+    <section class="AboutSection animate slideInLeft" id="AboutId">
         <div class="container">
             <h2>About Me</h2>
             <p>
-                I'm a passionate software engineer with a knack for crafting efficient, scalable, and user-friendly applications. I enjoy transforming ideas into digital experiences and constantly strive to learn and grow in this ever-evolving tech world.
+                I'm a passionate software engineer with a knack for crafting efficient, scalable, and user-friendly
+                applications. I enjoy transforming ideas into digital experiences and constantly strive to learn and
+                grow in this ever-evolving tech world.
             </p>
             <div class="AllSkillsDiv">
                 <div class="skill">
@@ -81,29 +86,106 @@
                     <h4>DevOps Principles</h4>
                 </div>
             </div>
-            
-            
+
+
         </div>
     </section>
 
-    <section class="ExperienceSection" id="ExperienceId">
-        <div class="container">
-            <h2>Experience</h2>
-    
-            <div class="experienceItem">
+    <section class="ExperienceSection animate slideInRight" id="ExperienceId">
+        <div class="ExperienceGrid">
+            <div class="ExperienceCircle">
+                <h2>Experience</h2>
+            </div>
+            <div class="experienceItem ex1">
                 <h3>Software Engineer Intern - XYZ Tech</h3>
                 <span class="duration">June 2023 - August 2023</span>
-                <p>Worked on full-stack development using React and Node.js, collaborated with cross-functional teams to deliver new features, and optimized performance across key modules.</p>
+                <p>Worked on full-stack development using React and Node.js, collaborated with cross-functional
+                    teams to deliver new features, and optimized performance across key modules.</p>
             </div>
-    
-            <div class="experienceItem">
+
+            <div class="experienceItem ex2">
                 <h3>Freelance Web Developer</h3>
                 <span class="duration">2022 - Present</span>
-                <p>Built responsive and interactive websites for clients using HTML, CSS, JavaScript, and modern frameworks. Prioritized accessibility, performance, and mobile-first design.</p>
+                <p>Built responsive and interactive websites for clients using HTML, CSS, JavaScript, and modern
+                    frameworks. Prioritized accessibility, performance, and mobile-first design.</p>
+            </div>
+
+          
+
+            <div class="experienceItem ex3">
+                <h3>Backend Developer Intern - ABC Solutions</h3>
+                <span class="duration">January 2023 - May 2023</span>
+                <p>Developed RESTful APIs using Express and MongoDB, implemented authentication systems, and
+                    contributed to database schema design for a scalable SaaS platform.</p>
+            </div>
+
+            <div class="experienceItem ex4">
+                <h3>Open Source Contributor - GitHub Projects</h3>
+                <span class="duration">2021 - Present</span>
+                <p>Contributed to open-source projects by fixing bugs, improving documentation, and implementing new
+                    features in JavaScript and TypeScript. Actively participated in code reviews and community
+                    discussions.</p>
             </div>
         </div>
     </section>
-    
+
+ 
+
+
+    <section class="ProjectsSection animate zoomIn" id="ProjectsId">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projectsGrid">
+                <div class="projectCard">
+                    <img src="Images/Portfolio.png" alt="Portfolio Screenshot" />
+                    <h3>Portfolio Website</h3>
+                    <p>A responsive personal portfolio site built with HTML, CSS, and JS.</p>
+                    <div class="projectLinks">
+
+                        <a href="https://github.com/Dhruv-Trent/Portfolio.git" target="_blank" class="github"><i
+                                class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+
+                <div class="projectCard">
+                    <img src="Images/Portfolio.png" alt="Task Manager Screenshot" />
+                    <h3>Task Manager App</h3>
+                    <p>Full-stack app using React, Node.js, MongoDB. Task CRUD, auth, filtering.</p>
+                    <div class="projectLinks">
+
+                        <a href="" target="_blank" class="github"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+
+                <div class="projectCard">
+                    <img src="Images/Portfolio.png" alt="Weather App Screenshot" />
+                    <h3>Weather App</h3>
+                    <p>Displays real-time weather using OpenWeather API, with geolocation support.</p>
+                    <div class="projectLinks">
+
+                        <a href="" target="_blank" class="github"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="ContactSection animate fadeIn" id="ContactId">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Have a project in mind or just want to say hi? Reach out!</p>
+            <form class="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
 
 
     <script src="js/script.js"></script>
