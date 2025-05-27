@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #ccc;
+}
+
+
+/* navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+
+    padding: 0 20px;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav.scrolled {
+    background-color: #222040;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* logo Img */
+.logoImg {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+/* All the links on the right side of navbar */
+.rightSideNav ul {
+    list-style: none;
+    display: flex;
+}
+
+.rightSideNav ul li a {
+    text-decoration: none;
+    padding-left: 20px;
+    color: #ccc;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.rightSideNav ul li a:hover {
+    color: #fff;
+}
+
+.rightSideNav ul li a.active {
+    font-family: 'Permanent Marker', cursive;
+    color: #f62222;
+    font-size: 1.5rem;
+}
+
+/* Main Section the first look*/
+.MainSection {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.MainSection h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.MainSection h1 strong {
+    font-size: 3rem;
+    color: #e2a971;
+}
+
+.MainSection span {
+    font-size: 1.25rem;
+    color: #ccc;
+}
+
+#tsparticles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+.ContentData {
+    position: relative;
+    z-index: 1;
+    padding-top: 100px;
+}
+
+
+
+/* all the sections */
+section {
+    padding: 80px 20px;
+    width: 100%;
+}
+
+/* all the containers in every Section */
+Section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+Section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-family: 'Permanent Marker', cursive;
+    color: #e2a971;
+}
+
+Section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* About Section */
+.AboutSection{
+    height: 100vh;
+
+}
+
+/* Skill part */
+.AllSkillsDiv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 60px;
+    justify-items: center;
+}
+
+.skill {
+    background-color: #1c1c1e;
+    border-radius: 12px;
+    padding: 25px 15px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+}
+
+.skill i {
+    font-size: 2rem;
+    color: #f0a500;
+    margin-bottom: 10px;
+}
+
+.skill h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px 8px rgba(240, 165, 0, 0.8);
+}
+
+/* Experince Section */
+.ExperienceSection{
+    height: 100vh;
+    width: 100vw;
+}
+.experienceItem {
+    margin-bottom: 40px;
+    text-align: left;
+    border: 1px dotted blanchedalmond;
+}
+
+.experienceItem h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #6f1717;
+}
+
+.duration {
+    display: block;
+    font-size: 0.95rem;
+    color: #c87878;
+    margin-bottom: 10px;
+}
