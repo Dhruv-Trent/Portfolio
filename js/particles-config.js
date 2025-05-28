@@ -23,7 +23,7 @@ tsParticles.load("tsparticles", {
         value: 0.8
       },
       size: {
-        value: { min: 1, max: 3 }
+        value: { min: 1, max: 7 }
       },
       move: {
         enable: true,

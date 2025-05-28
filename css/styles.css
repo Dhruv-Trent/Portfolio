@@ -303,6 +303,68 @@ Section p {
 }
 
 
+/* Launguage Section */
+.LaunguageSection {
+    position: relative;
+}
+.LaunguageDiv{
+    min-height: 200px;
+    min-width: 100%;
+
+
+}
+.LineDiv{
+    min-height: 1px;
+    border-bottom: 6px solid purple;
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+}
+.lanItemContainer{
+    display: flex;
+    justify-content: space-evenly;
+
+    align-items: center;
+    min-height: 200px;
+}
+
+.lanItem{
+    border: 2px solid rgb(207, 96, 96);
+    
+    background: radial-gradient(circle, #ff2222 10%, #6d00f1 90%);
+    padding: 20px 20px;
+    border-radius: 50%;
+    animation: dropSwing 1s ease-out forwards;
+    transform-origin: top center;
+}
+
+@keyframes dropSwing {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0;
+    }
+    30% {
+        transform: translateY(10px) rotate(10deg);
+        opacity: 1;
+    }
+    60% {
+        transform: translateY(-5px) rotate(-7deg);
+    }
+    80% {
+        transform: translateY(0px) rotate(4deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+
+
+
+
+
+
+
 
 /* Projects Section */
 .ProjectsSection {
