@@ -2,12 +2,12 @@ tsParticles.load("tsparticles", {
     fullScreen: { enable: true },
     background: {
       color: {
-        value: "#000000"
+        value: "#181818"
       }
     },
     particles: {
       number: {
-        value: 90,
+        value: 60,
         density: {
           enable: true,
           area: 800
@@ -17,13 +17,13 @@ tsParticles.load("tsparticles", {
         value: "#fff"
       },
       shape: {
-        type: "star"
+        type: ["circle", "square", "triangle", 'star']
       },
       opacity: {
         value: 0.8
       },
       size: {
-        value: { min: 1, max: 7 }
+        value: { min: 1, max: 3 }
       },
       move: {
         enable: true,
