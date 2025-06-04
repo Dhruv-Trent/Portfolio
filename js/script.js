@@ -1,3 +1,11 @@
+//Loading Screen
+window.addEventListener('load', ()=>{
+    setTimeout(function(){
+        document.querySelector('.con').style.display = 'none';
+        document.querySelector('.afterLoading').style.display = 'block';
+    },6000)
+})
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const nav = document.querySelector("nav");
@@ -60,10 +68,4 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Message sent!");
         });
     }
-
-
-
-
-
- 
 });
