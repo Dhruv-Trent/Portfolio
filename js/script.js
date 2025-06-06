@@ -3,13 +3,23 @@ window.addEventListener("load", () => {
   setTimeout(function () {
     document.querySelector(".con").style.display = "none";
     document.querySelector(".afterLoading").style.display = "block";
-  }, 6000);
+  }, 600);
 });
 
 // For Mode Changing Night and Light
 const toggleBtn = document.getElementById("modeToggle");
+const icon = toggleBtn.querySelector(".ModeToggleCircle i");
+
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
+
+  if (document.body.classList.contains("dark-mode")) {
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
+  } else {
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+  }
 });
 
 // For SmallText after Name
@@ -66,6 +76,7 @@ const colors = [
 function BGParticles() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+
 
   particlesArray = [];
   for (let i = 0; i < 100; i++) {
