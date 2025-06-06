@@ -1,0 +1,104 @@
+@import url(./ColorVariables.css);
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--bgColor2);
+}
+
+.navBar {
+    background-color: var(--bgColor1);
+    height: 60px;
+    width: 100%;
+    /* border: 2px solid green; */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.leftNav {
+
+    color: var(--primaryColor);
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.leftNav img {
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 2px;
+    margin-right: 20px;
+}
+
+
+.rightNav {
+    /* border: 2px solid red; */
+    font-size: 1.2em;
+    display: flex;
+}
+
+.rightNav ul {
+    display: flex;
+    align-items: center;
+
+}
+
+.rightNav ul li {
+    padding: 0 20px;
+    /* border: 1px solid gray; */
+    margin: 0 5px;
+}
+
+.rightNav ul li a {
+    text-decoration: none;
+    color: var(--secondaryColor);
+}
+
+
+.rightNav ul li a:hover {
+    color: var(--secondaryColorHover);
+    position: relative;
+    top: 2px;
+
+}
+.rightNav ul li a.active{
+    color: var(--primaryColor);
+    font-size: 1.3em;
+}
+
+.ModeToggle {
+    margin-right: 15px;
+    border: 2px solid var(--Black);
+    height: 30px;
+    width: 60px;
+    border-radius: 40px;
+    background-color: rgb(110, 255, 243);
+    cursor: pointer;
+}
+
+.ModeToggleCircle{
+    height: 80%;
+    width: 40%;
+    border: 1px solid black;
+    background-color: rgb(255, 191, 0);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+body.dark-mode .ModeToggle {
+    background-color: rgb(42, 0, 115);
+}
+
+body.dark-mode .ModeToggleCircle{
+    background-color: rgb(190, 190, 190);
+}
+
+body.dark-mode .ModeToggleCircle {
+    transform: translateX(100%);
+}

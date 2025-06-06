@@ -1,0 +1,33 @@
+:root {
+    --primaryColor: #4A90E2;            /* Calm blue */
+    --secondaryColor: #d212a5;          
+    --secondaryColorHover: #730b5b;          
+    --bgColor1: #F5F7FA;            /* Light grey background */
+    --bgColor2: #FFFFFF;            /* White */
+    --btnColor: #4A90E2;            /* Matches primary */
+    --smallBtnColor: #50E3C2;           /* Matches secondary */
+    --h1Color: #2C3E50;         /* Dark slate */
+    --h2Color: #34495E;         /* Slightly lighter slate */
+    --h3Color: #4A4A4A;         /* Dark grey */
+    --h4Color: #7F8C8D;         /* Mid grey */
+    --border1: #D1D8E0;         /* Soft grey for borders */
+    --border2: #BDC3C7;         /* Slightly darker for contrast */
+    --Black: #000;
+}
+
+body.dark-mode {
+    --Black: #ffffff;
+    --primaryColor: #4A90E2;            /* Stays consistent for brand identity */
+    --secondaryColor: #50E3C2;          /* Aqua pops on dark backgrounds */
+    --secondaryColorHover: #157560; 
+    --bgColor1: #1E1E2F;            /* Deep navy/indigo */
+    --bgColor2: #2C2C3C;            /* Slightly lighter for layering */
+    --btnColor: #4A90E2;            /* Bright against dark */
+    --smallBtnColor: #50E3C2;           /* Secondary pop */
+    --h1Color: #FFFFFF;         /* Pure white for clarity */
+    --h2Color: #E0E0E0;         /* Light grey */
+    --h3Color: #CCCCCC;         /* Muted grey */
+    --h4Color: #999999;         /* Subtle */
+    --border1: #3A3A4A;         /* Subtle border for dark UI */
+    --border2: #4A4A5A;         /* Slightly brighter for contrast */
+}

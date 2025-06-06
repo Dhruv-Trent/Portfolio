@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
     <link rel="stylesheet" href="css/styleLoading.css" />
+    <link rel="stylesheet" href="css/Navbar.css">
 </head>
 
 <body>
@@ -26,22 +28,27 @@
         </div>
     </div>
     <div class="afterLoading">
-        <div id="tsparticles"></div>
-        <nav>
-            <img src="Images/logo.png" alt="Dhruv Patel Logo" class="logoImg" />
-            <div class="rightSideNav">
+        <!-- <div id="tsparticles"></div> -->
+        <nav class="navBar">
+            <div class="leftNav">
+                <img src="./Images/logo.png" alt="Just logo Image"> Dhruv's Portfolio
+            </div>
+            <div class="rightNav">
                 <ul>
-                    <li><a href="#MainSectionId" class="active" data-nav="Home">Home</a></li>
-                    <li><a href="#AboutId" data-nav="About">About</a></li>
-                    <li><a href="#ExperienceId" data-nav="Experience">Experience</a></li>
-                    <li><a href="#ProjectsId" data-nav="Projects">Projects</a></li>
-                    <li><a href="#ContactId" data-nav="Contact">Contact</a></li>
+                    <li><a href="#about" class="active">About</a></li>
+                    <li><a href="">Experience</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Skills</a></li>
+                    <li><a href="">contact</a></li>
                 </ul>
-
+                <button class="ModeToggle" id="modeToggle">
+                    <div class="ModeToggleCircle">
+                    </div>
+                </button>
             </div>
         </nav>
 
-        <section class="MainSection animate fadeIn" id="MainSectionId">
+        <!-- <section class="MainSection animate fadeIn" id="MainSectionId">
 
             <div class="ContentData">
                 <h1>Hello, I am <strong>Dhruv Patel</strong></h1>
@@ -200,12 +207,12 @@
                     <button type="submit">Send Message</button>
                 </form>
             </div>
-        </section>
+        </section> -->
     </div>
 
     <script src="js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
-    <script src="js/particles-config.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script> -->
+    <!-- <script src="js/particles-config.js"></script> -->
 </body>
 
 </html>
