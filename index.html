@@ -8,11 +8,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet" />
+
+
     <link rel="stylesheet" href="css/reset.css">
     <!-- <link rel="stylesheet" href="css/styles.css" /> -->
     <link rel="stylesheet" href="css/styleLoading.css" />
     <link rel="stylesheet" href="css/Navbar.css">
     <link rel="stylesheet" href="css/IntroSection.css">
+    <link rel="stylesheet" href="css/Experience.css">
+    <link rel="stylesheet" href="css/projectSection.css">
+
+
+
 </head>
 
 <body>
@@ -35,9 +42,9 @@
             </div>
             <div class="rightNav">
                 <ul>
-                    <li><a href="#about" class="active">About</a></li>
-                    <li><a href="">Experience</a></li>
-                    <li><a href="">Projects</a></li>
+                    <li><a href="#aboutID" class="active">About</a></li>
+                    <li><a href="#experienceID">Experience</a></li>
+                    <li><a href="#projectID">Projects</a></li>
                     <li><a href="">Skills</a></li>
                     <li><a href="">contact</a></li>
                 </ul>
@@ -49,7 +56,7 @@
             </div>
         </nav>
 
-        <section class="introSection">
+        <section class="introSection" id="aboutID">
             <img src="./Images/Intro_Bg.jpeg" alt="" srcset="">
             <div class="introText">
                 <h1>Hey, I am Dhruv Patel </h1>
@@ -60,10 +67,116 @@
 
         </section>
 
+        <section class="experienceSection" id='experienceID'>
+            <img src="./Images/ExperienceBG.jpg" alt="" srcset="">
+            <h1>Experience</h1>
+
+            <div class="ExperienceContainer">
+                <div class="experienceBox">
+                    <div class="flipCard">
+                        <div class="flipCardInner">
+                            <div class="flipCardFront">
+                                <h4>Trent University IT</h4>
+                                <span>June 2025 – Current</span>
+                            </div>
+                            <div class="flipCardBack">
+                                <p>Providing support to students and faculty, maintaining lab hardware, and helping
+                                    manage the university’s internal IT systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experienceBox">
+                    <div class="flipCard">
+                        <div class="flipCardInner">
+                            <div class="flipCardFront">
+                                <h4>ByteCraft Solutions</h4>
+                                <span>Jan 2024 – May 2025</span>
+                            </div>
+                            <div class="flipCardBack">
+                                <p>Developed and maintained React-based applications, improved accessibility, and worked
+                                    on performance optimization for dynamic UI components.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experienceBox">
+                    <div class="flipCard">
+                        <div class="flipCardInner">
+                            <div class="flipCardFront">
+                                <h4>NovaCommerce</h4>
+                                <span>May 2023 – Dec 2023</span>
+                            </div>
+                            <div class="flipCardBack">
+                                <p>Assisted in frontend development for e-commerce features, integrated payment
+                                    gateways, and helped improve mobile conversion rates.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experienceBox">
+                    <div class="flipCard">
+                        <div class="flipCardInner">
+                            <div class="flipCardFront">
+                                <h4>CodeLab Bootcamp</h4>
+                                <span>Sept 2022 – Apr 2023</span>
+                            </div>
+                            <div class="flipCardBack">
+                                <p>Mentored new coders on web fundamentals, reviewed JavaScript projects, and helped
+                                    design a dashboard for tracking coding progress.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="projectSection" id="projectID">
+            <h1>
+                My Projects
+            </h1>
+            <div class="projectsBox">
+                <div class="projects">
+                    <img src="Images/logo.png" alt="">
+                    <h4>project name</h4>
+                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, dolore pariatur quod
+                        ratione quasi perferendis impedit totam distinctio dignissimos natus? </span>
+                        <button>GitHub</button>
+
+                </div>
+                <div class="projects activeProj"> <img src="Images/logo.png" alt="">
+                    <h4>project name</h4>
+                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, dolore pariatur quod
+                        ratione quasi perferendis impedit totam distinctio dignissimos natus? </span>
+                        <button>GitHub</button>
+                </div>
+                <div class="projects"> <img src="Images/logo.png" alt="">
+                    <h4>project name</h4>
+                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, dolore pariatur quod
+                        ratione quasi perferendis impedit totam distinctio dignissimos natus? </span>
+                        <button>GitHub</button>
+                </div>
+                <div class="projects"> <img src="Images/logo.png" alt="">
+                    <h4>project name</h4>
+                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, dolore pariatur quod
+                        ratione quasi perferendis impedit totam distinctio dignissimos natus? </span>
+                        <button>GitHub</button>
+                </div>
+            </div>
+        </section>
+
+
 
     </div>
 
     <script src="js/script.js"></script>
+
+
 </body>
 
 </html>

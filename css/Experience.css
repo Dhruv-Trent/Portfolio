@@ -1,0 +1,214 @@
+@import url(./ColorVariables.css);
+
+
+.experienceSection {
+
+    /* border: 2px solid royalblue; */
+    /* background-color: var(--bgColor2); */
+    /* background-image: url(../Images/Intro_Bg.jpeg); */
+    position: relative;
+
+}
+
+.experienceSection img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(2px); 
+    opacity: 0.4;      
+    z-index: -1;
+}
+
+
+body.dark-mode .experienceSection{
+    /* background-image: url(../Images/ExperienceBG.jpg); */
+
+}
+.experienceSection h1 {
+    padding-top: 20px;
+    font-size: 3.5em;
+    text-align: center;
+    color: var(--secondaryColor);
+}
+
+
+.ExperienceContainer {
+    padding-top: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    /* border: 2px solid black; */
+    min-height: 50vh;
+    width: 80%;
+}
+
+.ExperienceContainer::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    background-color: var(--line);
+    top: 40px;
+    bottom: 10px;
+    left: 50%;
+    border-radius: 10px;
+}
+
+
+.experienceBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.ExperienceContainer .experienceBox:nth-child(odd) {
+    right: 155px;
+}
+
+.ExperienceContainer .experienceBox:nth-child(even) {
+    left: 170px;
+}
+
+.experienceBox::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    background-color: var(--bgColor2);
+    border: 2px solid var(--black);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.ExperienceContainer .experienceBox:nth-child(odd)::before {
+    right: -20%;
+}
+
+.ExperienceContainer .experienceBox:nth-child(even)::before {
+    left: -20%;
+}
+
+
+.flipCard {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    border-radius: 50%;
+    
+}
+
+.flipCardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    border-radius: 50%;
+    transition: transform 1s ease;
+    backface-visibility: hidden;
+}
+
+
+
+
+.flipCard:hover .flipCardInner {
+transform: rotateY(180deg);
+}
+
+
+
+.flipCardFront,
+.flipCardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.flipCardFront {
+    background-color: var(--bgColor3);
+    color: var(--h4Color);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.flipCardBack {
+    background-color: var(--bgColor1);
+    color: var(--textColor1);
+    transform: rotateY(180deg);
+    border: none;
+    transition: border 1.5s ease;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.ExperienceContainer .experienceBox:nth-child(odd) .flipCardFront {
+    border-bottom: 15px double var(--red);
+    border-left: 15px double var(--red);
+    
+}
+
+.ExperienceContainer .experienceBox:nth-child(even) .flipCardFront {
+    border-bottom: 15px double var(--purple);
+    border-right: 15px double var(--purple);
+}
+
+
+.ExperienceContainer .experienceBox:nth-child(odd):hover .flipCardBack {
+    border-top: 15px double var(--red);
+    border-right: 15px double var(--red);
+}
+
+.ExperienceContainer .experienceBox:nth-child(even):hover .flipCardBack {
+    border-top: 15px double var(--purple);
+    border-left: 15px double var(--purple);
+}
+
+
+
+.flipCardFront h4,
+.flipCardBack h4 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--h1Color); /* Make sure this exists in ColorVariables.css */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* DATES (SPAN ELEMENTS) */
+.flipCardFront span {
+    font-size: 0.95em;
+    font-style: italic;
+    color: var(--textColor2); /* Optional soft secondary text color */
+    opacity: 0.85;
+}
+
+/* PARAGRAPH ON BACK SIDE */
+.flipCardBack p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: var(--textColor1);
+    opacity: 0.95;
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

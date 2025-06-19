@@ -1,0 +1,45 @@
+.projectSection {
+    height: 100vh;
+    border: 2px solid rgb(35, 35, 230);
+}
+
+.projectSection h1 {
+    font-size: 2.3em;
+    text-align: center;
+    color: var(--secondaryColor);
+}
+
+.projectsBox .projects img {
+    height: 100px;
+    width: 100px;
+}
+
+.projectsBox .projects {
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: beige;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    gap: 40px;
+
+
+}
+.activeProj{
+    scale: 1.2;
+}
+
+
+.projectsBox {
+
+    border: 2px solid salmon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}

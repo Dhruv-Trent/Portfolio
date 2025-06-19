@@ -1,33 +1,89 @@
 :root {
+    /* Primary and Secondary */
     --primaryColor: #4A90E2;            /* Calm blue */
     --secondaryColor: #d212a5;          
     --secondaryColorHover: #730b5b;          
-    --bgColor1: #F5F7FA;            /* Light grey background */
-    --bgColor2: #FFFFFF;            /* White */
-    --btnColor: #4A90E2;            /* Matches primary */
-    --smallBtnColor: #50E3C2;           /* Matches secondary */
-    --h1Color: #2C3E50;         /* Dark slate */
-    --h2Color: #34495E;         /* Slightly lighter slate */
-    --h3Color: #4A4A4A;         /* Dark grey */
-    --h4Color: #7F8C8D;         /* Mid grey */
-    --border1: #D1D8E0;         /* Soft grey for borders */
-    --border2: #BDC3C7;         /* Slightly darker for contrast */
-    --Black: #000;
+
+    /* Background Colors */
+    --bgColor1: #F5F7FA;               /* Light grey */
+    --bgColor2: #FFFFFF;               /* White */
+    --bgColor3: #EEF2F7;               /* Soft blue-grey */
+    --bgColor4: #FAFAFA;               /* Very light neutral */
+    --bgColor5: #EAF0F6;               /* Subtle cool tone */
+
+    /* Button Colors */
+    --btnColor: #4A90E2;
+    --smallBtnColor: #50E3C2;
+
+    /* Headings/Text */
+    --h1Color: #2C3E50;
+    --h2Color: #34495E;
+    --h3Color: #4A4A4A;
+    --h4Color: #7F8C8D;
+    
+
+    /* Additional Text Colors */
+    --textColor1: #333333;             /* Primary body text */
+    --textColor2: #555555;             /* Slightly muted */
+    --textColor3: #6B6B6B;             /* Subtext */
+    --textColor4: #888888;             /* Helper text */
+    --textColor5: #A0A0A0;             /* Placeholder or subtle text */
+    --textColor6: #1A1A1A;             /* Strong contrast */
+
+    /* Borders */
+    --border1: #D1D8E0;
+    --border2: #BDC3C7;
+    --border3: #E0E6ED;                /* Light blue-grey */
+    --border4: #C8D1DC;                /* Medium grey */
+    --border5: #ABB7C4;                /* Deeper grey */
+
+    /* Misc */
+    --black: #000;
+    --line: rgb(251, 213, 40);
+    --red: red;
+    --purple: purple;
 }
 
 body.dark-mode {
-    --Black: #ffffff;
-    --primaryColor: #4A90E2;            /* Stays consistent for brand identity */
-    --secondaryColor: #50E3C2;          /* Aqua pops on dark backgrounds */
-    --secondaryColorHover: #157560; 
-    --bgColor1: #1E1E2F;            /* Deep navy/indigo */
-    --bgColor2: #2C2C3C;            /* Slightly lighter for layering */
-    --btnColor: #4A90E2;            /* Bright against dark */
-    --smallBtnColor: #50E3C2;           /* Secondary pop */
-    --h1Color: #FFFFFF;         /* Pure white for clarity */
-    --h2Color: #E0E0E0;         /* Light grey */
-    --h3Color: #CCCCCC;         /* Muted grey */
-    --h4Color: #999999;         /* Subtle */
-    --border1: #3A3A4A;         /* Subtle border for dark UI */
-    --border2: #4A4A5A;         /* Slightly brighter for contrast */
+    --primaryColor: #4A90E2;
+    --secondaryColor: #50E3C2;
+    --secondaryColorHover: #157560;
+
+    /* Background Colors */
+    --bgColor1: #1E1E2F;
+    --bgColor2: #2C2C3C;
+    --bgColor3: #2A2A3A;               /* Slightly brighter than bg1 */
+    --bgColor4: #1A1A28;               /* Darker alternative */
+    --bgColor5: #3B3B4C;               /* Deep bluish-grey */
+
+    /* Button Colors */
+    --btnColor: #4A90E2;
+    --smallBtnColor: #50E3C2;
+
+    /* Headings/Text */
+    --h1Color: #FFFFFF;
+    --h2Color: #E0E0E0;
+    --h3Color: #CCCCCC;
+    --h4Color: #999999;
+
+    /* Additional Text Colors */
+    --textColor1: #F0F0F0;
+    --textColor2: #DDDDDD;
+    --textColor3: #BBBBBB;
+    --textColor4: #999999;
+    --textColor5: #777777;
+    --textColor6: #FFFFFF;
+
+    /* Borders */
+    --border1: #3A3A4A;
+    --border2: #4A4A5A;
+    --border3: #505060;                /* Slightly brighter for layering */
+    --border4: #606070;                /* Mid-dark tone */
+    --border5: #707080;                /* Softer than black */
+
+    /* Misc */
+    --black: #ffffff;
+    --line: rgb(255, 215, 34);
+    --red: rgb(255, 125, 125);
+    --purple: rgb(194, 58, 194);
 }
