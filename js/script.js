@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
   setTimeout(function () {
     document.querySelector(".con").style.display = "none";
     document.querySelector(".afterLoading").style.display = "block";
-  }, 6000);
+  }, 60);
 });
 
 // For Mode Changing Night and Light
@@ -231,28 +231,35 @@ for (let i = 0; i < 50; i++) {
 
 codeBackgroundDiv.textContent = repeatedCode;
 
+// For Projects
+function openProject(index) {
+  document.getElementById(`Project${index}`).style.display = "flex";
+}
 
+function closeProject(index) {
+  document.getElementById(`Project${index}`).style.display = "none";
+}
 
-const projects = document.querySelectorAll('.projects');
-let currProj = 0;
-
-
-projects.forEach((project, index) => {
-    project.classList.remove('activeProj');
+window.addEventListener("click", (e) => {
+  document.querySelectorAll(".projMoreBox").forEach(box => {
+    if (e.target === box) {
+      box.style.display = "none";
+    }
+  });
 });
-projects[currProj].classList.add('activeProj');
-
-setInterval(() => {
-
-    projects[currProj].classList.remove('activeProj');
 
 
-    currProj = (currProj + 1) % projects.length;
 
 
-    projects[currProj].classList.add('activeProj');
-}, 1500);
+// For Skills 
+const skills = document.querySelectorAll(".SkillBox ul li");
+    let i = 0;
 
+    setInterval(() => {
+        skills.forEach(skill => skill.classList.remove("active"));
+        skills[i].classList.add("active");
+        i = (i + 1) % skills.length;
+    }, 1000); // adjust speed here (500ms = half-second per switch)
 
 
 
@@ -317,3 +324,18 @@ setInterval(() => {
 //         });
 //     }
 // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

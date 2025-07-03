@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/IntroSection.css">
     <link rel="stylesheet" href="css/Experience.css">
     <link rel="stylesheet" href="css/projectSection.css">
+    <link rel="stylesheet" href="css/SkillStyles.css">
 
 
 
@@ -137,35 +138,123 @@
         </section>
 
         <section class="projectSection" id="projectID">
-            <h1>
-                My Projects
-            </h1>
-            <div class="projectsBox">
-                <div class="projects">
-                    <img src="Images/logo.png" alt="">
-                    <h4>project name</h4>
-                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, dolore pariatur quod
-                        ratione quasi perferendis impedit totam distinctio dignissimos natus? </span>
-                        <button>GitHub</button>
+            <img src="./Images/projBG.jpg" alt="" srcset="">
+            <h1>Projects</h1>
+            <div class="projectBox">
 
+
+                <div class="project">
+                    <h3>My Portfolio</h3>
+                    <img src="./Images//PortfolioProj1.png" alt="Portfolio's Preview" />
+
+                    <div class="ProjLaung">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <button class="viewMoreBtn" onclick="openProject(1)">View More</button>
                 </div>
-                <div class="projects activeProj"> <img src="Images/logo.png" alt="">
-                    <h4>project name</h4>
-                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, dolore pariatur quod
-                        ratione quasi perferendis impedit totam distinctio dignissimos natus? </span>
-                        <button>GitHub</button>
+
+                <div class="project">
+                    <h3>Smart Portfolio</h3>
+                    <img src="./Images/Snake-GameProj.png" alt="Snake-Game's Preview" />
+
+                    <div class="ProjLaung">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <button class="viewMoreBtn" onclick="openProject(2)">View More</button>
                 </div>
-                <div class="projects"> <img src="Images/logo.png" alt="">
-                    <h4>project name</h4>
-                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, dolore pariatur quod
-                        ratione quasi perferendis impedit totam distinctio dignissimos natus? </span>
-                        <button>GitHub</button>
+
+                <div class="project">
+                    <h3>LeetCode Python</h3>
+                    <img src="./Images/Leet-CodeProj.png" alt="LeetCode Preview" />
+
+                    <div class="ProjLaung">
+                        <span>Python</span>
+                    </div>
+                    <button class="viewMoreBtn" onclick="openProject(3)">View More</button>
                 </div>
-                <div class="projects"> <img src="Images/logo.png" alt="">
-                    <h4>project name</h4>
-                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, dolore pariatur quod
-                        ratione quasi perferendis impedit totam distinctio dignissimos natus? </span>
-                        <button>GitHub</button>
+
+
+
+            </div>
+
+
+            <div class="projMoreBox" id="Project1">
+                <div class="ProjContent">
+                    <span class="closeBtn" onclick="closeProject(1)">&times;</span>
+                    <h2>My Portfolio</h2>
+                    <img src="./Images/PortfolioProj1.png" alt="Full Project">
+                    <p>
+                        This portfolio website was built entirely from scratch using HTML, CSS, and JavaScript. It
+                        includes animated transitions, dark/light mode toggling, a loading screen, and interactive
+                        sections like timeline-based experience and modal popups. The design is mobile-friendly and
+                        reflects both my development skills and personal style.
+                    </p>
+                    <div class="ProjLinks">
+                        <a href="https://github.com/Dhruv-Trent/Portfolio" target="_blank">GitHub</a>
+                        <a href="https://github.com/Dhruv-Trent/Portfolio" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projMoreBox" id="Project2">
+                <div class="ProjContent">
+                    <span class="closeBtn" onclick="closeProject(2)">&times;</span>
+                    <h2>Snake-Game</h2>
+                    <img src="./Images/Snake-GameProj.png" alt="Full Project">
+                    <p>
+                        A classic Snake Game built using pure JavaScript, HTML, and CSS. It features real-time movement,
+                        collision detection, scoring logic, and dynamic game speed. The interface is responsive and
+                        optimized for both keyboard and touch interactions, making it fun and playable across devices.
+                    </p>
+
+                    <div class="ProjLinks">
+                        <a href="https://github.com/GABBAR1606/Snake-Game.github.io" target="_blank">GitHub</a>
+                        <a href="https://gabbar1606.github.io/Snake-Game.github.io/" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projMoreBox" id="Project3">
+                <div class="ProjContent">
+                    <span class="closeBtn" onclick="closeProject(3)">&times;</span>
+                    <h2>Leet-Code</h2>
+                    <img src="./Images/Leet-CodeProj.png" alt="Full Project">
+                    <p>
+                        This GitHub repository is a collection of over 100 Python solutions to popular LeetCode problems
+                        covering arrays, strings, dynamic programming, recursion, and more. It's organized topic-wise
+                        and includes clean, well-commented code for each problem — making it a useful resource for DSA
+                        practice and interviews.
+                    </p>
+                    <div class="ProjLinks">
+                        <a href="https://github.com/Dhruv-Trent/LeetCode_Python" target="_blank">GitHub</a>
+                        <!-- <a href="https://github.com/Dhruv-Trent/LeetCode_Python" target="_blank">Live Demo</a> -->
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="skillSection" id="skillID">
+                <h1>My Skills</h1>
+                <div class="SkillBox">
+                    <ul>
+                        <li><i class="fab fa-html5"></i> HTML</li>
+                        <li><i class="fab fa-css3-alt"></i> CSS</li>
+                        <li><i class="fab fa-js"></i> JavaScript</li>
+                        <li><i class="fab fa-react"></i> React JS</li>
+                        <li><i class="fab fa-python"></i> Python</li>
+                        <li>C#</li>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Node JS</li>
+                        <li>Numpy Python</li>
+                        <li>Pandas Python</li>
+                    </ul>
                 </div>
             </div>
         </section>

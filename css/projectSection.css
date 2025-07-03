@@ -1,45 +1,156 @@
 .projectSection {
-    height: 100vh;
-    border: 2px solid rgb(35, 35, 230);
+    /* background-color: var(--bgColor2); */
+    text-align: center;
+
+    position: relative;
 }
+.projectSection::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+    z-index: -1;
+}
+
+.projectSection img:first-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(1px); 
+    opacity: 0.4;      
+    z-index: -1;
+}
+
+
 
 .projectSection h1 {
-    font-size: 2.3em;
-    text-align: center;
+    font-size: 3.5em;
     color: var(--secondaryColor);
+    padding: 40px 0;
 }
 
-.projectsBox .projects img {
-    height: 100px;
-    width: 100px;
-}
-
-.projectsBox .projects {
-    border: 2px solid black;
-    border-radius: 20px;
-    background-color: beige;
-    width: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
+.projectBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
-
-
-}
-.activeProj{
-    scale: 1.2;
+    padding: 0 10px;
 }
 
+.project {
+    backdrop-filter: blur(8px);
+    /* background-color: var(--bgProj); */
+    border: 2.5px double var(--borProj);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    
+}
 
-.projectsBox {
 
-    border: 2px solid salmon;
-    display: flex;
-    align-items: center;
+.project:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    color: var(--Black);
+}
+
+.project img {
+    width: 100%;
+    border-radius: 20px;
+    margin: 5px 0;
+    object-fit: cover;
+    height: 160px;
+}
+
+.ProjLaung span {
+    display: inline-block;
+    background-color: var(--primaryColor);
+    color: var(--Black);
+    margin: 5px 5px 10px 0;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 1.1 rem;
+}
+
+.viewMoreBtn {
+    margin-top: 3px;
+    background-color: var(--secondaryColor);
+    color: var(--White);
+    padding: 18px 26px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.7s;
+}
+
+.viewMoreBtn:hover {
+    background-color: var(--secondaryColorHover);
+}
+
+
+.projMoreBox {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
     justify-content: center;
+    align-items: center;
+}
+
+.ProjContent {
+    background-color: var(--bgColor1);
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    color: var(--textColor2);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
+}
+
+.ProjContent h2 {
+    color: var(--secondaryColor);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.ProjContent img {
+    width: 100%;
+    border-radius: 20px;
+    height: 40vh;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 1px;
+    right: 15px;
+    font-size: 2rem;
+    color: var(--Black);
+    cursor: pointer;
+}
+
+.ProjLinks a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--primaryColor);
+    font-weight: bold;
 
 }

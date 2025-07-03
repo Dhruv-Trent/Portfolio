@@ -10,6 +10,7 @@
     --bgColor3: #EEF2F7;               /* Soft blue-grey */
     --bgColor4: #FAFAFA;               /* Very light neutral */
     --bgColor5: #EAF0F6;               /* Subtle cool tone */
+    --bgProj:rgba(202, 202, 240, 0.529);
 
     /* Button Colors */
     --btnColor: #4A90E2;
@@ -36,9 +37,11 @@
     --border3: #E0E6ED;                /* Light blue-grey */
     --border4: #C8D1DC;                /* Medium grey */
     --border5: #ABB7C4;                /* Deeper grey */
+    --borProj: rgba(135, 143, 0, 0.568);
 
     /* Misc */
-    --black: #000;
+    --Black: #000;
+    --White: rgb(255, 255, 255);
     --line: rgb(251, 213, 40);
     --red: red;
     --purple: purple;
@@ -55,6 +58,7 @@ body.dark-mode {
     --bgColor3: #2A2A3A;               /* Slightly brighter than bg1 */
     --bgColor4: #1A1A28;               /* Darker alternative */
     --bgColor5: #3B3B4C;               /* Deep bluish-grey */
+    --bgProj:rgba(202, 202, 240, 0.283);
 
     /* Button Colors */
     --btnColor: #4A90E2;
@@ -80,10 +84,14 @@ body.dark-mode {
     --border3: #505060;                /* Slightly brighter for layering */
     --border4: #606070;                /* Mid-dark tone */
     --border5: #707080;                /* Softer than black */
+    --borProj: rgb(224, 235, 14);
 
     /* Misc */
-    --black: #ffffff;
+    --Black: #ffffff;
+    --White: #000000;
     --line: rgb(255, 215, 34);
     --red: rgb(255, 125, 125);
     --purple: rgb(194, 58, 194);
 }
+
+
