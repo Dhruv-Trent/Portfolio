@@ -11,6 +11,8 @@
     --bgColor4: #FAFAFA;               /* Very light neutral */
     --bgColor5: #EAF0F6;               /* Subtle cool tone */
     --bgProj:rgba(202, 202, 240, 0.529);
+    --contectBGButton:#f2f240;
+    --contectBGButtonHover:#75f240;
 
     /* Button Colors */
     --btnColor: #4A90E2;
@@ -45,6 +47,8 @@
     --line: rgb(251, 213, 40);
     --red: red;
     --purple: purple;
+    --contectColor: #ffca28;
+    --textColor1Hover: #047580bd;
 }
 
 body.dark-mode {
@@ -59,6 +63,8 @@ body.dark-mode {
     --bgColor4: #1A1A28;               /* Darker alternative */
     --bgColor5: #3B3B4C;               /* Deep bluish-grey */
     --bgProj:rgba(202, 202, 240, 0.283);
+    --contectBGButton:#a9a92ac1;
+    --contectBGButtonHover:#5bb933ac;
 
     /* Button Colors */
     --btnColor: #4A90E2;
@@ -92,6 +98,8 @@ body.dark-mode {
     --line: rgb(255, 215, 34);
     --red: rgb(255, 125, 125);
     --purple: rgb(194, 58, 194);
+    --contectColor: #ffca28;
+    --textColor1Hover: #00eaff;
 }
 
 

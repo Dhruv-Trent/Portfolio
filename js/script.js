@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
   setTimeout(function () {
     document.querySelector(".con").style.display = "none";
     document.querySelector(".afterLoading").style.display = "block";
-  }, 60);
+  }, 6000);
 });
 
 // For Mode Changing Night and Light
@@ -259,7 +259,17 @@ const skills = document.querySelectorAll(".SkillBox ul li");
         skills.forEach(skill => skill.classList.remove("active"));
         skills[i].classList.add("active");
         i = (i + 1) % skills.length;
-    }, 1000); // adjust speed here (500ms = half-second per switch)
+    }, 1000); 
+
+
+
+
+
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Message Sent! I'll get back to you soon.");
+      this.reset();
+    });
 
 
 

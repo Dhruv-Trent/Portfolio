@@ -1,0 +1,138 @@
+.contactSection {
+    /* background-color: #121212; */
+    /* color: #fff; */
+    padding: 60px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+}
+.contactBG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(1px); 
+    opacity: 0.4;      
+    z-index: -1;
+}
+
+.contactContainer {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contactLeft {
+    flex: 1 1 500px;
+    padding: 20px;
+}
+
+.contactLeft h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--Black);
+}
+
+.contactLeft h1 span {
+    color: var(--contectColor);
+}
+
+.contactLeft p {
+    color: var(--textColor3);
+    margin-bottom: 30px;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contactForm input,
+#contactForm textarea {
+
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--bgColor3);
+    color: var(--textColor1);
+    font-size: 1.2rem;
+    outline: none;
+}
+
+
+#contactForm textarea {
+    outline: none;
+    min-height: 150px;
+    resize: none;
+}
+
+#contactForm input:focus, #contactForm textarea:focus
+{ 
+    border: 2px solid sienna;
+}
+
+#contactForm button {
+
+    background-color: var(--contectBGButton);
+    color: var(--Black);
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+#contactForm button:hover {
+    background-color:var(--contectBGButtonHover);
+}
+
+.socialIcons {
+    margin-top: 30px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.socialIcons a {
+    color: var(--textColor1);
+    /* margin-right: 15px; */
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.socialIcons a:hover {
+    color: var(--textColor1Hover);
+}
+
+.contactRight {
+    flex: 1 1 400px;
+    text-align: center;
+    position: relative;
+}
+
+.contactRight img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 50% 50% 0 0 / 40% 40% 0 0;
+    background: #ffca28;
+    padding: 15px;
+    box-shadow: 0 0 30px rgba(255, 202, 40, 0.2);
+}
+
+@media (max-width: 768px) {
+    .contactContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contactRight img {
+        margin-top: 30px;
+    }
+}

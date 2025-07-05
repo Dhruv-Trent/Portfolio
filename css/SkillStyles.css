@@ -52,12 +52,13 @@
 
 
 .SkillBox ul li.active {
-    background: linear-gradient(120deg, #ffd700, #ffffff, #ffd700);
+    /* background: linear-gradient(120deg, #ffd700, #ffffff, #ffd700); */
+    background: linear-gradient(120deg, #cdbe6a00, #ffffff, #ffd90000);
     background-size: 200% 200%;
     animation: shine 1s infinite;
     color: black !important;
     font-weight: 900;
-    box-shadow: 0 0 20px #fff400, 0 0 30px #ffcc00;
+    box-shadow: 0 0 20px #fff20000, 0 0 30px #ffcc0000;
     transform: scale(1.15);
 }
 
