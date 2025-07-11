@@ -92,11 +92,11 @@ body.dark-mode .experienceSection{
 }
 
 .ExperienceContainer .experienceBox:nth-child(odd)::before {
-    right: -20%;
+    right: -19%;
 }
 
 .ExperienceContainer .experienceBox:nth-child(even)::before {
-    left: -20%;
+    left: -19%;
 }
 
 

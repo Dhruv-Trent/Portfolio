@@ -1,6 +1,4 @@
 .contactSection {
-    /* background-color: #121212; */
-    /* color: #fff; */
     padding: 60px 20px;
     font-family: 'Segoe UI', sans-serif;
     position: relative;
@@ -119,12 +117,35 @@
 
 .contactRight img {
     width: 100%;
-    max-width: 400px;
-    border-radius: 50% 50% 0 0 / 40% 40% 0 0;
-    background: #ffca28;
+    max-width: 600px;
     padding: 15px;
-    box-shadow: 0 0 30px rgba(255, 202, 40, 0.2);
+    filter: drop-shadow(10px 10px 10px #dd6844);
 }
+
+.contactRight img{
+    animation: colorBG 6s infinite ease;
+}
+@keyframes colorBG {
+    0% {
+        filter: drop-shadow(20px 20px 9px #dd6844);
+    }
+    20% {
+        filter: drop-shadow(20px 20px 9px #f39c12); 
+    }
+    40% {
+        filter: drop-shadow(20px 20px 9px #27ae60); 
+    }
+    60% {
+        filter: drop-shadow(20px 20px 9px #2980b9); 
+    }
+    80% {
+        filter: drop-shadow(20px 20px 9px #8e44ad); 
+    }
+    100% {
+        filter: drop-shadow(20px 20px 9px #dd6844);
+    }
+}
+
 
 @media (max-width: 768px) {
     .contactContainer {

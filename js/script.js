@@ -22,10 +22,6 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
-
-
-
-
 // For SmallText after Name
 const texts = [
   "Software Engineer",
@@ -86,7 +82,7 @@ function BGParticles() {
     particlesArray.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      size: Math.random() * 5 + 1,
+      size: Math.random() * 6 + 1,
       dx: (Math.random() - 0.5) * 1,
       dy: (Math.random() - 0.5) * 1,
       color: colors[Math.floor(Math.random() * colors.length)],
@@ -241,111 +237,75 @@ function closeProject(index) {
 }
 
 window.addEventListener("click", (e) => {
-  document.querySelectorAll(".projMoreBox").forEach(box => {
+  document.querySelectorAll(".projMoreBox").forEach((box) => {
     if (e.target === box) {
       box.style.display = "none";
     }
   });
 });
 
-
-
-
-// For Skills 
+// For Skills
 const skills = document.querySelectorAll(".SkillBox ul li");
-    let i = 0;
+let i = 0;
 
-    setInterval(() => {
-        skills.forEach(skill => skill.classList.remove("active"));
-        skills[i].classList.add("active");
-        i = (i + 1) % skills.length;
-    }, 1000); 
-
-
+setInterval(() => {
+  skills.forEach((skill) => skill.classList.remove("active"));
+  skills[i].classList.add("active");
+  i = (i + 1) % skills.length;
+}, 1000);
 
 
 
-    document.getElementById("contactForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      alert("Message Sent! I'll get back to you soon.");
+// Contact form submit
+(function () {
+  emailjs.init("Erjwco5V3gW_JxgXi"); // replace with your real Public Key
+})();
+
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs.sendForm("service_ilg5pce", "template_4cquh5s", this)
+    .then(() => {
+      alert("✅ Message sent successfully!");
       this.reset();
+    }, (error) => {
+      console.error("Failed to send message:", error);
+      alert("❌ Failed to send message. Please try again later.");
     });
+});
 
 
 
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".rightNav ul li a");
 
+// Handle scroll event
+window.addEventListener("scroll", () => {
+  let currentSection = "";
 
-// document.addEventListener("DOMContentLoaded", function () {
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 150;
+    const sectionHeight = section.offsetHeight;
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+      currentSection = section.getAttribute("id");
+    }
+  });
 
-//     const nav = document.querySelector("nav");
-//     const navLinks = document.querySelectorAll(".rightSideNav ul li a");
-//     const sections = document.querySelectorAll("section[id]");
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href").includes(currentSection)) {
+      link.classList.add("active");
+    }
+  });
+});
 
-//     window.addEventListener("scroll", function () {
-//         if (window.scrollY > 50) {
-//             nav.classList.add("scrolled");
-//         } else {
-//             nav.classList.remove("scrolled");
-//         }
-//     });
-
-//     navLinks.forEach((link) => {
-//         link.addEventListener("click", function () {
-//             navLinks.forEach((link) => link.classList.remove("active"));
-//             this.classList.add("active");
-//         });
-//     });
-
-//     const sectionObserver = new IntersectionObserver(
-//         entries => {
-//             entries.forEach(entry => {
-//                 if (entry.isIntersecting) {
-//                     const sectionId = entry.target.getAttribute("id");
-//                     navLinks.forEach(link => {
-//                         link.classList.toggle("active", link.getAttribute("href") === `#${sectionId}`);
-//                     });
-//                 }
-//             });
-//         },
-//         { threshold: 0.5 }
-//     );
-
-//     sections.forEach(section => sectionObserver.observe(section));
-
-//     const animatedSections = document.querySelectorAll(".animate");
-//     const animationObserver = new IntersectionObserver(
-//         entries => {
-//             entries.forEach(entry => {
-//                 if (entry.isIntersecting) {
-//                     entry.target.classList.add("visible");
-//                 }
-//             });
-//         },
-//         { threshold: 0.2 }
-//     );
-
-//     animatedSections.forEach(section => animationObserver.observe(section));
-
-//     const contactForm = document.querySelector(".contactForm");
-//     if (contactForm) {
-//         contactForm.addEventListener("submit", (e) => {
-//             e.preventDefault();
-//             alert("Message sent!");
-//         });
-//     }
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Handle click event to update active class immediately
+navLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    navLinks.forEach((nav) => nav.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
 
 

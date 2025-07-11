@@ -23,24 +23,51 @@
 .introText {
     max-width: 40%;
     overflow: visible;
-    /* border-left: 2px solid rgba(124, 124, 255);
-    border-top: 2px solid rgb(0, 0, 142); */
     padding: 40px 20px;
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    /* background-color:var(--bgColor1); */
-    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
     height: fit-content;
-    margin-top: 10%;
-    /* position: relative;
-    bottom:100px */
+    margin-top: 8%;
+    border: 2px solid #4A90E2;
+    animation: borderblinking 4s ease-in-out infinite;
+    position:absolute;
 }
+
+
+@keyframes borderblinking {
+    0% {
+        border-color: #4A90E2;  /* Soft Blue */
+        box-shadow: 0 0 10px 2px #4A90E2AA;
+    }
+    20% {
+        border-color: #50E3C2;  /* Aqua Green */
+        box-shadow: 0 0 10px 2px #50E3C2AA;
+    }
+    40% {
+        border-color: #F5A623;  /* Warm Amber */
+        box-shadow: 0 0 10px 2px #F5A623AA;
+    }
+    60% {
+        border-color: #D0021B;  /* Rich Red */
+        box-shadow: 0 0 10px 2px #D0021BAA;
+    }
+    80% {
+        border-color: #9013FE;  /* Medium Purple */
+        box-shadow: 0 0 10px 2px #9013FEAA;
+    }
+    100% {
+        border-color: #4A90E2;  /* Soft Blue */
+        box-shadow: 0 0 10px 2px #4A90E2AA;
+    }
+}
+
 
 .introText h1 {
     font-size: 4.5rem;
     color: var(--primaryColor);
     text-align: left;
     margin-bottom: 20px;
+
 }
 
 #SmallText {
