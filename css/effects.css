@@ -1,0 +1,139 @@
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px); /* for nice slide-up default */
+  }
+
+/* Fade In */
+.fade-in.animate  {
+    animation: fadeIn 1s ease-in forwards;
+}
+
+/* Fade Out */
+.fade-out.animate  {
+    animation: fadeOut 1s ease-out forwards;
+}
+
+/* Slide Up */
+.slide-up.animate  {
+    animation: slideUp 1s ease-out forwards;
+}
+
+/* Slide Down */
+.slide-down.animate  {
+    animation: slideDown 1s ease-out forwards;
+}
+
+/* Slide Left */
+.slide-left.animate  {
+    animation: slideLeft 1s ease-out forwards;
+}
+
+/* Slide Right */
+.slide-right.animate  {
+    animation: slideRight 1s ease-out forwards;
+}
+
+/* Zoom In */
+.zoom-in.animate  {
+    animation: zoomIn 0.8s ease-in-out forwards;
+}
+
+/* Zoom Out */
+.zoom-out.animate  {
+    animation: zoomOut 0.8s ease-in-out forwards;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+}
+
+

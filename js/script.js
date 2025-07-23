@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
   setTimeout(function () {
     document.querySelector(".con").style.display = "none";
     document.querySelector(".afterLoading").style.display = "block";
-  }, 6000);
+  }, 60);
 });
 
 // For Mode Changing Night and Light
@@ -256,25 +256,34 @@ setInterval(() => {
 
 
 
-// Contact form submit
 (function () {
-  emailjs.init("Erjwco5V3gW_JxgXi"); // replace with your real Public Key
+  emailjs.init("Erjwco5V3gW_JxgXi");
 })();
-
 
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   emailjs.sendForm("service_ilg5pce", "template_4cquh5s", this)
     .then(() => {
-      alert("✅ Message sent successfully!");
+      showToast("✅ Message sent successfully!", "success");
       this.reset();
     }, (error) => {
       console.error("Failed to send message:", error);
-      alert("❌ Failed to send message. Please try again later.");
+      showToast("❌ Failed to send message. Please try again later.", "error");
     });
 });
 
+function showToast(message, type) {
+  const toast = document.createElement("div");
+  toast.className = `toast ${type}`;
+  toast.textContent = message;
+
+  document.getElementById("toast-container").appendChild(toast);
+
+  setTimeout(() => {
+    toast.remove();
+  }, 6000); // total visible time = 3s + fadeOut time
+}
 
 
 const sections = document.querySelectorAll("section");
@@ -309,3 +318,18 @@ navLinks.forEach((link) => {
 });
 
 
+// For Welcome Effects like fade in amd all
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+      observer.unobserve(entry.target); // animate once
+    }
+  });
+}, {
+  threshold: 0.1 // trigger when 10% visible
+});
+
+document.querySelectorAll('.animate-on-scroll').forEach(elem => {
+  observer.observe(elem);
+});
