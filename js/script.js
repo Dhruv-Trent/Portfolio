@@ -1,10 +1,66 @@
 // Loading Screen
-window.addEventListener("load", () => {
-  setTimeout(function () {
-    document.querySelector(".con").style.display = "none";
+const cvs = document.getElementById("codeRain");
+const ctxx = cvs.getContext("2d");
+
+cvs.height = window.innerHeight;
+cvs.width = window.innerWidth;
+
+const letters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const fontSize = 14;
+const columns = cvs.width / fontSize;
+
+const drops = Array(Math.floor(columns)).fill(1);
+
+// Start animation
+let startTime = Date.now();
+let animationDuration = 5000; // 5 seconds
+
+function draw() {
+  // Clear with slight opacity for trailing effect
+  ctxx.fillStyle = "rgba(0, 0, 0, 0.05)";
+  ctxx.fillRect(0, 0, cvs.width, cvs.height);
+
+  // Draw the falling letters (green matrix style)
+  ctxx.fillStyle = "#0F0";
+  ctxx.font = fontSize + "px monospace";
+
+  for (let i = 0; i < drops.length; i++) {
+    const text = letters.charAt(Math.floor(Math.random() * letters.length));
+    ctxx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+    if (drops[i] * fontSize > cvs.height && Math.random() > 0.975) {
+      drops[i] = 0;
+    }
+    drops[i]++;
+  }
+
+  // Responsive font size for the "DHRUV PATEL" text
+  if (Date.now() - startTime > animationDuration - 3000) {
+    ctxx.fillStyle = "#9865f7";
+
+    const baseFontSize = 60; // max font size
+    const minFontSize = 20;  // min font size
+    let dynamicFontSize = Math.max(minFontSize, cvs.width / 10);
+    if (dynamicFontSize > baseFontSize) dynamicFontSize = baseFontSize;
+
+    ctxx.font = `bold ${dynamicFontSize}px Fredericka the Great`;
+
+    const text = "DHRUV   PATEL";
+    const textWidth = ctxx.measureText(text).width;
+    ctxx.fillText(text, cvs.width / 2 - textWidth / 2, cvs.height / 2);
+  }
+
+  // Continue animation or stop and show main content
+  if (Date.now() - startTime < animationDuration) {
+    requestAnimationFrame(draw);
+  } else {
+    document.querySelector(".loading").style.display = "none";
     document.querySelector(".afterLoading").style.display = "block";
-  }, 60);
-});
+
+  }
+}
+
+draw();
 
 // For Mode Changing Night and Light
 const toggleBtn = document.getElementById("modeToggle");
@@ -254,7 +310,14 @@ setInterval(() => {
   i = (i + 1) % skills.length;
 }, 1000);
 
+// Contact Section
+const contactRightImgID = document.getElementById("contactRightImgID");
+const nameInput = document.querySelector('#contactForm input[name="name"]');
 
+contactRightImgID.addEventListener("click", () => {
+  nameInput.focus();
+  nameInput.scrollIntoView({ behavior: "smooth", block: "center" });
+});
 
 (function () {
   emailjs.init("Erjwco5V3gW_JxgXi");
@@ -263,14 +326,16 @@ setInterval(() => {
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  emailjs.sendForm("service_ilg5pce", "template_4cquh5s", this)
-    .then(() => {
+  emailjs.sendForm("service_ilg5pce", "template_4cquh5s", this).then(
+    () => {
       showToast("✅ Message sent successfully!", "success");
       this.reset();
-    }, (error) => {
+    },
+    (error) => {
       console.error("Failed to send message:", error);
       showToast("❌ Failed to send message. Please try again later.", "error");
-    });
+    }
+  );
 });
 
 function showToast(message, type) {
@@ -285,7 +350,6 @@ function showToast(message, type) {
   }, 6000); // total visible time = 3s + fadeOut time
 }
 
-
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".rightNav ul li a");
 
@@ -296,7 +360,10 @@ window.addEventListener("scroll", () => {
   sections.forEach((section) => {
     const sectionTop = section.offsetTop - 150;
     const sectionHeight = section.offsetHeight;
-    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+    if (
+      window.scrollY >= sectionTop &&
+      window.scrollY < sectionTop + sectionHeight
+    ) {
       currentSection = section.getAttribute("id");
     }
   });
@@ -317,19 +384,55 @@ navLinks.forEach((link) => {
   });
 });
 
-
 // For Welcome Effects like fade in amd all
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate');
-      observer.unobserve(entry.target); // animate once
-    }
-  });
-}, {
-  threshold: 0.1 // trigger when 10% visible
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate");
+        observer.unobserve(entry.target); 
+      }
+    });
+  },
+  {
+    threshold: 0.1, 
+  }
+);
+
+document.querySelectorAll(".animate-on-scroll").forEach((elem) => {
+  observer.observe(elem);
 });
 
-document.querySelectorAll('.animate-on-scroll').forEach(elem => {
-  observer.observe(elem);
+// // <<---------------------------------------------------------- RESPONSIVE ---------------------------------------------------------->>
+
+// <<------------------------------- NAVBAR ------------------------------->>
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.querySelector(".rightNav ul");
+
+// Toggle menu
+hamburger.addEventListener("click", (e) => {
+  e.stopPropagation
+  navMenu.classList.toggle("show");
+
+  if (navMenu.classList.contains("show")) {
+    hamburger.innerHTML = '<i class="fas fa-times"></i>';
+  } else {
+    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+  }
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", (e) => {
+  if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+    navMenu.classList.remove("show");
+    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+  }
+});
+
+// Close menu on scroll
+window.addEventListener("scroll", () => {
+  if (navMenu.classList.contains("show")) {
+    navMenu.classList.remove("show");
+    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+  }
 });

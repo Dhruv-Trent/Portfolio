@@ -110,12 +110,77 @@ body.dark-mode .ModeToggle {
     background-color: rgb(42, 0, 115);
 }
 
-/* body.dark-mode .ModeToggleCircle{
-    background-color: rgb(190, 190, 190);
-} */
 
 body.dark-mode .ModeToggleCircle {
     transform: translateX(100%);
 }
 
 
+/* RESPONSIVE */
+
+/* Hamburger style (hidden by default) */
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    color: var(--secondaryColor);
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .rightNav ul {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: var(--bgColor1);
+        flex-direction: column;
+        width: 200px;
+        text-align: center;
+        display: none; 
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border: 2px solid var(--primaryColor); 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+    }
+
+    .rightNav ul li {
+        padding: 15px 0;
+        margin: 0;
+    }
+
+    .rightNav ul li a {
+        display: block;
+        width: 100%;
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: block;
+    }
+
+    
+}
+
+/* When active menu */
+.rightNav ul.show {
+    display: flex !important;
+}
+
+
+
+
+/* Keep default behavior for normal screens */
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+/* Projector / Ultra-wide view */
+@media (min-width: 1650px) {
+    .navContainer {
+        max-width: 1700px; /* center limit */
+        margin: 0 auto;    /* center horizontally */
+    }
+}

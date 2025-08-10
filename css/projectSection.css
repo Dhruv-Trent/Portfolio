@@ -4,24 +4,27 @@
 
     position: relative;
 }
+
 .projectSection::before {
     content: "";
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
     z-index: -1;
 }
 
-.projectSection img:first-child{
+.projectSection img:first-child {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: blur(1px); 
-    opacity: 0.4;      
+    filter: blur(1px);
+    opacity: 0.4;
     z-index: -1;
 }
 
@@ -38,6 +41,7 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
     padding: 0 10px;
+
 }
 
 .project {
@@ -49,7 +53,7 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    
+
 }
 
 
@@ -154,3 +158,242 @@
     font-weight: bold;
 
 }
+
+
+/* This is skillSection */
+.skillSection {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.skillSection h1 {
+    font-size: 3rem;
+    color: var(--secondaryColor);
+}
+
+.SkillBox ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.SkillBox ul li {
+    padding: 15px 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--Black);
+    font-weight: bold;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.1rem;
+    min-width: 130px;
+    text-align: center;
+    cursor: default;
+}
+
+.SkillBox ul li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--primaryColor);
+}
+
+.SkillBox ul li i {
+    font-size: 1.5em;
+    margin-right: 8px;
+    color: rgba(255, 217, 0, 0.503);
+    transition: transform 1.4s ease;
+}
+
+.SkillBox ul li:hover i {
+    transform: rotate(360deg) scale(1.2);
+}
+
+
+.SkillBox ul li.active {
+    /* background: linear-gradient(120deg, #ffd700, #ffffff, #ffd700); */
+    background: linear-gradient(120deg, #cdbe6a00, #ffffff, #ffd90000);
+    background-size: 200% 200%;
+    animation: shine 1s infinite;
+    color: black !important;
+    font-weight: 900;
+    box-shadow: 0 0 20px #fff20000, 0 0 30px #ffcc0000;
+    transform: scale(1.15);
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+
+/* Medium screens (tablets and small laptops) */
+@media (max-width: 1024px) {
+    .projectBox {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+        padding: 0 5px;
+    }
+
+    .project img {
+        height: 140px;
+    }
+
+    .project h3 {
+        font-size: 1.3rem;
+    }
+
+    .ProjLaung span {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+    .viewMoreBtn {
+        padding: 14px 22px;
+        font-size: 0.9rem;
+    }
+
+    .ProjContent {
+        max-width: 90%;
+        padding: 25px;
+    }
+
+    .ProjContent img {
+        height: 35vh;
+    }
+
+    .skillSection h1 {
+        font-size: 2.5rem;
+    }
+
+    .SkillBox ul li {
+        font-size: 1rem;
+        min-width: 110px;
+        padding: 12px 20px;
+    }
+
+    .SkillBox ul li i {
+        font-size: 1.3em;
+    }
+}
+
+/* Small screens (phones and small tablets) */
+@media (max-width: 768px) {
+    .projectBox {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .project {
+        padding: 15px;
+    }
+
+    .project img {
+        height: 100px;
+    }
+
+    .project h3 {
+        font-size: 1.4rem;
+    }
+
+    .ProjLaung {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .ProjLaung span {
+        padding: 8px 14px;
+        font-size: 1rem;
+    }
+
+    .viewMoreBtn {
+        width: 80%;
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+
+    .ProjContent {
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    .ProjContent img {
+        height: 30vh;
+    }
+
+
+    .SkillBox ul li {
+        min-width: 130px;
+        /* margin: 0 auto; */
+        font-size: 1.1rem;
+        padding: 12px 15px;
+    }
+}
+
+
+
+/* Very small phones */
+@media (max-width: 480px) {
+    .projectSection h1 {
+        font-size: 2.5rem;
+        padding: 25px 0 15px;
+    }
+
+    .project img {
+        height: 140px;
+    }
+
+    .project h3 {
+        font-size: 1.2rem;
+    }
+
+    .ProjLaung span {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .viewMoreBtn {
+        padding: 12px 0;
+        font-size: 0.9rem;
+    }
+
+    .ProjContent {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    .ProjContent img {
+        height: 25vh;
+    }
+
+
+    .SkillBox ul li {
+        font-size: 1rem;
+        min-width: 90px;
+        padding: 10px 12px;
+    }
+}
+
+/* Ultra-wide screens (projectors, big monitors) */
+@media (min-width: 1650px) {
+    .projectSection,
+    .skillSection {
+      max-width: 1700px; /* Adjust if you want tighter/narrower content */
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }

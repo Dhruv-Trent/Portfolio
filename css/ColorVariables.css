@@ -49,6 +49,7 @@
     --purple: purple;
     --contectColor: #ffca28;
     --textColor1Hover: #047580bd;
+    --blurEffect: rgba(255, 255, 255, 0.5); 
 }
 
 body.dark-mode {
@@ -100,6 +101,8 @@ body.dark-mode {
     --purple: rgb(194, 58, 194);
     --contectColor: #ffca28;
     --textColor1Hover: #00eaff;
+    --blurEffect: rgba(20, 20, 20, 0.5); 
+
 }
 
 

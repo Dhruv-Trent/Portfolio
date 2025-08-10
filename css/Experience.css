@@ -10,23 +10,25 @@
 
 }
 
-.experienceSection img{
+.experienceSection img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    max-height: 1300px;
     object-fit: cover;
-    filter: blur(2px); 
-    opacity: 0.4;      
+    filter: blur(2px);
+    opacity: 0.4;
     z-index: -1;
 }
 
 
-body.dark-mode .experienceSection{
+body.dark-mode .experienceSection {
     /* background-image: url(../Images/ExperienceBG.jpg); */
 
 }
+
 .experienceSection h1 {
     padding-top: 20px;
     font-size: 3.5em;
@@ -43,7 +45,7 @@ body.dark-mode .experienceSection{
     align-items: center;
     margin: auto;
     /* border: 2px solid black; */
-    min-height: 50vh;
+    padding-bottom: 50px;
     width: 80%;
 }
 
@@ -51,6 +53,7 @@ body.dark-mode .experienceSection{
     content: '';
     position: absolute;
     width: 15px;
+    max-height:1100px ;
     background-color: var(--line);
     top: 40px;
     bottom: 10px;
@@ -70,7 +73,7 @@ body.dark-mode .experienceSection{
     width: 250px;
     position: relative;
     z-index: 1;
-    
+
 }
 
 .ExperienceContainer .experienceBox:nth-child(odd) {
@@ -106,7 +109,7 @@ body.dark-mode .experienceSection{
     height: 100%;
     perspective: 1000px;
     border-radius: 50%;
-    
+
 }
 
 .flipCardInner {
@@ -123,7 +126,7 @@ body.dark-mode .experienceSection{
 
 
 .flipCard:hover .flipCardInner {
-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 
@@ -165,7 +168,7 @@ transform: rotateY(180deg);
 .ExperienceContainer .experienceBox:nth-child(odd) .flipCardFront {
     border-bottom: 15px double var(--red);
     border-left: 15px double var(--red);
-    
+
 }
 
 .ExperienceContainer .experienceBox:nth-child(even) .flipCardFront {
@@ -191,7 +194,8 @@ transform: rotateY(180deg);
     font-size: 1.4em;
     font-weight: 600;
     margin-bottom: 8px;
-    color: var(--h1Color); /* Make sure this exists in ColorVariables.css */
+    color: var(--h1Color);
+    /* Make sure this exists in ColorVariables.css */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -199,7 +203,8 @@ transform: rotateY(180deg);
 .flipCardFront span {
     font-size: 0.95em;
     font-style: italic;
-    color: var(--textColor2); /* Optional soft secondary text color */
+    color: var(--textColor2);
+    /* Optional soft secondary text color */
     opacity: 0.85;
 }
 
@@ -212,3 +217,104 @@ transform: rotateY(180deg);
     padding: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
+
+
+
+
+
+
+/* Medium screens (tablets and small laptops) */
+/* and */
+/* Small screens (phones and small tablets) */
+@media (max-width: 1024px) {
+    .ExperienceContainer {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .experienceBox {
+        height: 200px;
+        width: 200px;
+    }
+
+
+    .ExperienceContainer .experienceBox:nth-child(odd) {
+        right: 122px;
+    }
+
+    .ExperienceContainer .experienceBox:nth-child(even) {
+        left: 138px;
+    }
+
+    .experienceBox::before {
+        padding: 8px;
+    }
+
+    .flipCardFront h4,
+    .flipCardBack h4 {
+        font-size: 1.2em;
+    }
+
+    .flipCardBack p {
+        font-size: 0.85em;
+        line-height: 1.2;
+
+    }
+
+}
+@media (max-width: 768px){
+.flipCardBack {
+    border-radius: 8%;
+}}
+
+
+/* Very small phones */
+@media (max-width: 480px) {
+    .ExperienceContainer {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .experienceBox {
+        height: 150px;
+        width: 150px;
+    }
+
+
+    .ExperienceContainer .experienceBox:nth-child(odd) {
+        right: 88px;
+    }
+
+    .ExperienceContainer .experienceBox:nth-child(even) {
+        left: 102.5px;
+    }
+
+    .experienceBox::before {
+        padding: 8px;
+    }
+
+    .flipCardFront h4,
+    .flipCardBack h4 {
+        font-size: 1em;
+    }
+
+    .flipCardBack {
+        border-radius: 8%;
+    }
+
+    .flipCardBack p {
+        font-size: 0.65em;
+        line-height: 1;
+
+    }
+}
+/* Ultra-wide screens: center and limit width */
+@media (min-width: 1650px) {
+    .experienceSection {
+      max-width: 1700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }

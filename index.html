@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/IntroSection.css">
     <link rel="stylesheet" href="css/Experience.css">
     <link rel="stylesheet" href="css/projectSection.css">
-    <link rel="stylesheet" href="css/SkillStyles.css">
+
     <link rel="stylesheet" href="css/ContactStyles.css">
 
 
@@ -27,34 +27,31 @@
 
 <body>
     <div class="loading ">
-        <div class="con ">
-            <div class="outerContainer">
-                <div class="slideWrapper">
-                    <div class="innerContainer">
-                        <div class="innn"></div>
-                    </div>
-                </div>
-                <h1>Welcome to Dhruv's Portfolio</h1>
-            </div>
-        </div>
+        <canvas id="codeRain"></canvas>
     </div>
     <div class="afterLoading">
         <nav class="navBar">
-            <div class="leftNav">
-                <img src="./Images/logo.png" alt="Just logo Image" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"> Dhruv's Portfolio 
-            </div>
-            <div class="rightNav animate-on-scroll slide-down" >
-                <ul>
-                    <li><a href="#aboutID" class="active">About</a></li>
-                    <li><a href="#experienceID">Experience</a></li>
-                    <li><a href="#projectID">Projects</a></li>
-                    <li><a href="#contactID">Contact</a></li>
-                </ul>
-                <button class="ModeToggle" id="modeToggle">
-                    <div class="ModeToggleCircle">
-                        <i class="fas fa-sun"></i>
+            <div class="navContainer">
+                <div class="leftNav">
+                    <img src="./Images/logo.png" alt="Just logo Image"
+                        onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"> Dhruv's Portfolio
+                </div>
+                <div class="rightNav animate-on-scroll slide-down">
+                    <ul>
+                        <li><a href="#aboutID" class="active">About</a></li>
+                        <li><a href="#experienceID">Experience</a></li>
+                        <li><a href="#projectID">Projects</a></li>
+                        <li><a href="#contactID">Contact</a></li>
+                    </ul>
+                    <button class="ModeToggle" id="modeToggle">
+                        <div class="ModeToggleCircle">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                    </button>
+                    <div class="hamburger" id="hamburger">
+                        <i class="fas fa-bars"></i>
                     </div>
-                </button>
+                </div>
             </div>
         </nav>
 
@@ -262,34 +259,37 @@
 
         <section class="contactSection" id="contactID">
             <img class="contactBG" src="./Images/ContactUsBG.jpg" alt="" srcset="">
-            
-            <div class="contactContainer animate-on-scroll slide-left">
-              <div class="contactLeft">
-                <h1>Let's <span>Get in Touch</span></h1>
-                <p>
-                  Just say Hello and I'll get back to you soon.
-                </p>
-        
-                <form id="contactForm">
-                    <input type="text" name="name" placeholder="Your Name" required />
-                    <input type="email" name="email" placeholder="Your Email" required />
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">SEND MESSAGE</button>
-                  </form>
-                <div class="socialIcons animate-on-scroll slide-up">
-                  <a href="https://www.facebook.com/profile.php?id=100065382054448" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                  <a href="https://www.instagram.com/dkpatel1606/" target="_blank"><i class="fab fa-instagram"></i></a>
-                  <a href="https://www.linkedin.com/in/dhruv-kanubhai-patel-b83573271/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                  <a href="https://github.com/Dhruv-Trent" target="_blank"><i class="fab fa-github"></i></a>
-                </div>
-              </div>
-              <div class="contactRight">
-                <img src="./Images/contactMeBGless.webp"  alt="just decorative Image" />
-              </div>
-            </div>
-          </section>
 
-          <div id="toast-container"></div>
+            <div class="contactContainer animate-on-scroll slide-left">
+                <div class="contactLeft">
+                    <h1>Let's <span>Get in Touch</span></h1>
+                    <p>
+                        Just say Hello and I'll get back to you soon.
+                    </p>
+
+                    <form id="contactForm">
+                        <input type="text" name="name" placeholder="Your Name" required />
+                        <input type="email" name="email" placeholder="Your Email" required />
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <button type="submit">SEND MESSAGE</button>
+                    </form>
+                    <div class="socialIcons animate-on-scroll slide-up">
+                        <a href="https://www.facebook.com/profile.php?id=100065382054448" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/dkpatel1606/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/dhruv-kanubhai-patel-b83573271/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Dhruv-Trent" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contactRight">
+                    <img id="contactRightImgID" src="./Images/contactMeBGless.webp" alt="just decorative Image" />
+                </div>
+            </div>
+        </section>
+
+        <div id="toast-container"></div>
 
     </div>
 
@@ -300,7 +300,3 @@
 </body>
 
 </html>
-
-
-
-
