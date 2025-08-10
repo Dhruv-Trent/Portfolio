@@ -409,9 +409,8 @@ document.querySelectorAll(".animate-on-scroll").forEach((elem) => {
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.querySelector(".rightNav ul");
 
-// Toggle menu
 hamburger.addEventListener("click", (e) => {
-  e.stopPropagation
+  e.stopPropagation();   // <-- fix here
   navMenu.classList.toggle("show");
 
   if (navMenu.classList.contains("show")) {
